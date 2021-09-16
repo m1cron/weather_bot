@@ -9,6 +9,8 @@ springBoot {
 }
 
 dependencies {
+    implementation "org.telegram:telegrambots-spring-boot-starter:$ver.telegramBots"
+
     // Spring
     implementation "org.springframework.boot:spring-boot-starter-web"
     implementation "org.springframework.cloud:spring-cloud-starter-openfeign:$ver.openFeign"
@@ -26,5 +28,4 @@ dependencies {
 
     // Test
     testImplementation "org.springframework.boot:spring-boot-starter-test"
-    testImplementation "com.h2database:h2:$ver.h2"
 }

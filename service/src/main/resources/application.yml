@@ -1,3 +1,11 @@
+app:
+  bot:
+    username: 'GetFreeWeather_Bot'
+    token: ''
+  feign:
+    openWeatherMap:
+      url: 'http://api.openweathermap.org/data/2.5'
+
 spring:
   application:
     name: app-weather-bot

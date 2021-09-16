@@ -17,6 +17,7 @@ public class OpenWeatherMapDto {
   private List<Weather> weather;
   private Main main;
   private Wind wind;
+  private Integer cod;
 
   @Data
   @NoArgsConstructor

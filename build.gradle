@@ -11,7 +11,8 @@ buildscript {
                 openFeign               : '2.2.3.RELEASE',
                 logback                 : '1.2.3',
                 logstashLogbackEncoder  : '6.2',
-                h2                      : '1.4.200'
+
+                telegramBots            : '5.3.0'
         ]
     }
 

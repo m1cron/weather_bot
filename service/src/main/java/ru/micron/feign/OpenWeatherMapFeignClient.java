@@ -8,15 +8,14 @@ import ru.micron.feign.config.BasicFeignConfig;
 
 @FeignClient(
     name = "openWeatherMapFeignClient",
-    url = "http://api.openweathermap.org/data/2.5",
-    configuration = BasicFeignConfig.class
-)
+    url = "${app.feign.openWeatherMap.url}",
+    configuration = BasicFeignConfig.class)
 public interface OpenWeatherMapFeignClient {
 
   @GetMapping("/weather")
-  OpenWeatherMapDto getWeather(
-      @RequestParam("q") String cityName,
+  OpenWeatherMapDto getWeatherByCity(
       @RequestParam("appid") String apiKey,
+      @RequestParam("q") String cityName,
       @RequestParam("lang") String lang
   );
 }
