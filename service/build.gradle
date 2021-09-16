@@ -1,0 +1,30 @@
+archivesBaseName = rootProject.name
+group = parent.group
+version = parent.version
+
+apply plugin: 'org.springframework.boot'
+
+springBoot {
+    mainClassName = "${group}.Application"
+}
+
+dependencies {
+    // Spring
+    implementation "org.springframework.boot:spring-boot-starter-web"
+    implementation "org.springframework.cloud:spring-cloud-starter-openfeign:$ver.openFeign"
+
+    // Logback
+    implementation "ch.qos.logback:logback-classic:$ver.logback"
+    implementation "net.logstash.logback:logstash-logback-encoder:$ver.logstashLogbackEncoder"
+
+    // Servlet
+    compileOnly "javax.servlet:javax.servlet-api:4.0.1"
+
+    // Lombok
+    compileOnly "org.projectlombok:lombok:$ver.lombok"
+    annotationProcessor "org.projectlombok:lombok:$ver.lombok"
+
+    // Test
+    testImplementation "org.springframework.boot:spring-boot-starter-test"
+    testImplementation "com.h2database:h2:$ver.h2"
+}

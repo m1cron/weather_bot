@@ -1,0 +1,34 @@
+spring:
+  application:
+    name: app-weather-bot
+  main:
+    banner-mode: off
+    allow-bean-definition-overriding: true
+  mandatory-file-encoding: UTF-8
+  jackson:
+    default-property-inclusion: NON_NULL
+    mapper:
+      accept_case_insensitive_properties: true
+      accept_case_insensitive_enums: true
+      auto_detect_creators: true
+      auto_detect_setters: true
+      auto_detect_getters: true
+      auto_detect_is_getters: true
+    serialization:
+      fail_on_empty_beans: false
+      write-dates-as-timestamps: false
+    deserialization:
+      fail_on_unknown_properties: false
+      read_enums_using_to_string: true
+    parser:
+      allow_backslash_escaping_any_character: true
+    property-naming-strategy: LOWER_CAMEL_CASE
+
+server:
+  port: 8080
+  servlet:
+    encoding:
+      force-response: true
+      charset: UTF-8
+
+logging.config: classpath:logback-spring.xml
