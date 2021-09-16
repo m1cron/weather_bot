@@ -27,7 +27,7 @@ public class FeignErrorDecoder implements ErrorDecoder {
         HttpStatus.valueOf(response.status()),
         response.body()
     );
-    return new CareerFeignException(response.status(), message, response.request(), null);
+    return new CustomFeignException(response.status(), message, response.request(), null);
   }
 
   private String getServiceName(Request request) {

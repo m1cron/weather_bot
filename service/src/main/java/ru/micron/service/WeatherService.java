@@ -19,7 +19,7 @@ public class WeatherService {
       "погода: %s\n" +
       "температура: %d градусов\n" +
       "влажность: %d%%\n" +
-      "скорость: ветра %d м/с\n";
+      "скорость ветра: %d м/с\n";
 
   private final OpenWeatherMapFeignClient openWeatherMapFeignClient;
 

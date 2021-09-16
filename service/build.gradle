@@ -19,9 +19,6 @@ dependencies {
     implementation "ch.qos.logback:logback-classic:$ver.logback"
     implementation "net.logstash.logback:logstash-logback-encoder:$ver.logstashLogbackEncoder"
 
-    // Servlet
-    compileOnly "javax.servlet:javax.servlet-api:4.0.1"
-
     // Lombok
     compileOnly "org.projectlombok:lombok:$ver.lombok"
     annotationProcessor "org.projectlombok:lombok:$ver.lombok"
